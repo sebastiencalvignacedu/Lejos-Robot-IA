@@ -5,7 +5,7 @@ import lejos.hardware.motor.EV3MediumRegulatedMotor;
 import lejos.hardware.port.Port;
 
 public class Action {
-	Port A;
+	Port A,B,C;
 	
 	private EV3LargeRegulatedMotor LeftMotor, RightMotor;
 	
