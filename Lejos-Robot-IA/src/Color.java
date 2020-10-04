@@ -5,21 +5,21 @@ import lejos.robotics.SampleProvider;
 
 public class Color extends Perception {
 
-	
- Port s3;
- EV3ColorSensor colorSensor;
- SampleProvider colorProvider;
- float[] colorSample;
+	protected String color;
+	Port s3;
+	EV3ColorSensor colorSensor;
+	SampleProvider colorProvider;
+	float[] colorSample;
   
- public Color() {
-  s3 = LocalEV3.get().getPort("S3");
-  colorSensor = new EV3ColorSensor(s3);
-  colorProvider = colorSensor.getRGBMode();
-  colorSample = new float[colorProvider.sampleSize()];
-  colorProvider.fetchSample(colorSample, 0);
-  //Delay.msDelay(250);
-  colorSensor.close();
- }
+	 public Color() {
+		 s3 = LocalEV3.get().getPort("S3");
+		 colorSensor = new EV3ColorSensor(s3);
+		 colorProvider = colorSensor.getRGBMode();
+		 colorSample = new float[colorProvider.sampleSize()];
+		 colorProvider.fetchSample(colorSample, 0);
+		 //Delay.msDelay(250);
+		 colorSensor.close();
+	 }
  
 	public void refresh() {
 		colorProvider.fetchSample(colorSample, 0);
