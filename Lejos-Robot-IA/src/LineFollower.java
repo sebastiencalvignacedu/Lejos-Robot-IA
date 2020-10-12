@@ -1,7 +1,3 @@
-package org.suffieldacademy.introcs.yourname;
-
-
-import org.suffieldacademy.introcs.NormalizationFilter;
 import lejos.hardware.ev3.EV3;
 import lejos.hardware.ev3.LocalEV3;
 import lejos.robotics.RegulatedMotor;
