@@ -4,7 +4,7 @@ import lejos.hardware.ev3.LocalEV3;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.motor.EV3MediumRegulatedMotor;
 import lejos.hardware.port.Port;
-
+import lejos.utility.Delay;
 import lejos.hardware.ev3.LocalEV3;
 import lejos.hardware.port.Port;
 import lejos.hardware.motor.EV3LargeRegulatedMotor;
@@ -57,6 +57,10 @@ public class Action {
 	public void stop() {
 		LeftMotor.stop();
         RightMotor.stop();
+	}
+	public void avancerTempsMS(int temps) {
+		this.forward();
+		Delay.msDelay(temps);
 	}
 	
 }
