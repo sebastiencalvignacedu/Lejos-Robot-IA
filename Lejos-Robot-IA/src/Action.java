@@ -12,7 +12,9 @@ import lejos.hardware.motor.EV3MediumRegulatedMotor;
 
 
 public class Action {
-
+	
+	private float vitesseMax = (float) 17.45;
+	
 	private Port A,B,C,D;
 	private EV3LargeRegulatedMotor LeftMotor, RightMotor;
 	private EV3MediumRegulatedMotor MiddleMotor;
@@ -61,6 +63,20 @@ public class Action {
 	public void avancerTempsMS(int temps) {
 		this.forward();
 		Delay.msDelay(temps);
+		
+	}
+	public void avancerDistance(int temps) {
+		
+	}
+	public void reculerTempsMS(int temps) {
+		this.backward();
+		Delay.msDelay(temps);
+	}
+	
+	public void avancerDist(float d) {
+		float t = d/vitesseMax;
+		this.forward();
+		Delay.msDelay((long) t*1000);
 	}
 	
 }
