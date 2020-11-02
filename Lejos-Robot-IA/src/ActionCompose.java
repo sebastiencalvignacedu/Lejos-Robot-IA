@@ -5,7 +5,7 @@ public class ActionCompose {
 	}
 	
 	public void rechercheLigne(String couleur) {
-		// deplacemenetAlea ** ulitsé ici * jusqu’a trouver la couleur voulu
+		// deplacemenetAlea ** ulitsÃ© ici * jusquâ€™a trouver la couleur voulu
 
 	}
 	
@@ -16,17 +16,32 @@ public class ActionCompose {
 	}
 	
 	public void recherchePalet() {
-		// effectuer une rotation une fois stoppé sur une ligne pour essayer
-		// de détecter un palet
+		// effectuer une rotation une fois stoppÃ© sur une ligne pour essayer
+		// de dÃ©tecter un palet
 	}
 	
 	public void allerBaseAdverse() {
-		// sens et valeur de rotation à effectuer; avancer jusqu'à une ligne; 
-		// détecter ligne + lâcher palet
+		// sens et valeur de rotation Ã  effectuer; avancer jusqu'Ã  une ligne; 
+		// dÃ©tecter ligne + lÃ¢cher palet
 	}
 	
 	public void detectionObjet(){
-		// déterminer si l’objet est un mur, palet ou robot
+		// dÃ©terminer si lâ€™objet est un mur, palet ou robot
+		Action a = new Action();
+			Capteurs p = new Capteurs();
+			a.avancerDist((float)25.0);
+			p.actualise();
+			if(p.distance < (float)25.0) {
+				deplacementAlea(10);
+			}
+			else {
+				while(p.touche == false) {
+					a.avancerDist((float)5.0);
+					p.actualise();
+				}
+				a.pick();
+				allerBaseAdverse();
+			}
 	}
 	
 	public void avancerDistance(int d) {
@@ -38,12 +53,12 @@ public class ActionCompose {
 	}
 	
 	public void tournerAngle(int a) {
-		// si positif sens horaire, si négatif antihoraire NB: il faudra peut-être
-		// régler la vitesse et le delay 
+		// si positif sens horaire, si nÃ©gatif antihoraire NB: il faudra peut-Ãªtre
+		// rÃ©gler la vitesse et le delay 
 
 	}
 	
 	public void Alignement() {
-		// aligne la tête du robot sur l’objet perçu s’il est reconnu comme un palet
+		// aligne la tÃªte du robot sur lâ€™objet perÃ§u sâ€™il est reconnu comme un palet
 	}
 }
