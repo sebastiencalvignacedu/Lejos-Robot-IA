@@ -74,7 +74,7 @@ public class Agent {
 		
 	}
 	
-		public void deplacementAleaV1(int temps) {
+	public void deplacementAleaV1(int temps) {
 		// La V1 ne prend pas en compte les obstacles.
 		// se deplace de facon aleatoire dans la table de jeu en utilisant 
 		// detectionObjet pour eviter les mures et tourner angle pour prendre
