@@ -75,17 +75,32 @@ public class Agent {
 	}
 	
 	public void deplacementAleaV1() {
+		// V1 est la forme la plus simple de deplacementAlea
+		// V1 ne prend pas en compte les obstacles
+		// se deplace de facon aleatoire dans la table de jeu en utilisant 
+		// ne prend PAS en compte detectionObjet (voir deplacementAleaV2)
+		// une nouvelle direction aleatoire (inspiration de bumper car)
+
+		double distanceAlea = Math.floor(Math.random()*10); // genere une distance entre 0 et 10 cm
+		pilote.travel(distanceAlea);
+		double angleAlea = Math.floor((Math.random()*720)-360); // genere un angle aleatoire entre -360 et 360 degrees
+		pilote.rotate(angleAlea);
+	}
+	
+	public void deplacementAleaV2() {
 		// La V1 ne prend pas en compte les obstacles.
 		// se deplace de facon aleatoire dans la table de jeu en utilisant 
 		// detectionObjet pour eviter les mures et tourner angle pour prendre
 		// une nouvelle direction aleatoire (inspiration de bumper car)
 
-		while (true) {
-			int distanceAlea = Math.floor(Math.random()*10); // genere une distance entre 0 et 10 cm
-			pilote.travel(distanceAlea);
-			int angleAlea = Math.floor((Math.random()*720)-360); // genere un angle aleatoire entre -360 et 360 degrees
-			pilote.rotate(angleAlea);
+		double distanceAlea = Math.floor(Math.random()*10); // genere une distance entre 0 et 10 cm
+		
+		for (double distanceParcouru = 0;distanceParcouru<distanceAlea;distanceParcouru+1) {
+			monActionneur.travel(distanceAlea);
 		}
+
+		double angleAlea = Math.floor((Math.random()*720)-360); // genere un angle aleatoire entre -360 et 360 degrees
+		monActionneur.rotate(angleAlea);
 	}
 	
 	public void sequence1(){}
