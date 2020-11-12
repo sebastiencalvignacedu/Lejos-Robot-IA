@@ -82,9 +82,9 @@ public class Agent {
 
 		while (true) {
 			int distanceAlea = Math.floor(Math.random()*10); // genere une distance entre 0 et 10 cm
-			monActionneur.travel(distanceAlea);
+			pilote.travel(distanceAlea);
 			int angleAlea = Math.floor((Math.random()*720)-360); // genere un angle aleatoire entre -360 et 360 degrees
-			monActionneur.rotate(angleAlea);
+			pilote.rotate(angleAlea);
 		}
 	}
 	
