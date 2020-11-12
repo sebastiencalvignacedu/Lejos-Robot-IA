@@ -87,8 +87,6 @@ public class Agent {
 		pilote.rotate(angleAlea);
 	}
 	
-	// A tester par cedric svp
-	public void evaluerDeplacementAleaV1() {
 		try {
 			Agent agent = new Agent();
 			agent.deplacementAleaV1();
@@ -115,23 +113,6 @@ public class Agent {
 
 		double angleAlea = Math.floor((Math.random()*720)-360); // genere un angle aleatoire entre -360 et 360 degrees
 		pilote.rotate(angleAlea);
-	}
-	
-	// Ne pas lancer, car deplacementAleaV2 n'est pas pret
-	public void evaluerDeplacementAleaV2() {
-		try {
-			Agent agent = new Agent();
-			agent.deplacementAleaV2();
-			
-			if(Button.ESCAPE.isDown()) {
-				pilote.stop();
-				System.exit(0);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("Une");
-			System.out.println("Erreur de Seb");
-		}
 	}
 	
 	public void sequence1(){}
@@ -220,11 +201,26 @@ public class Agent {
   
 	public static void main(String[] args) {
 		
-		Button.ENTER.waitForPressAndRelease();
+		
+		
+		//Button.ENTER.waitForPressAndRelease();
 
 		
-		
-		
+		// Tester la partie suivante pour deplacementAleaV1
+		try {
+			Agent agent = new Agent();
+			agent.deplacementAleaV1();
+			
+			if(Button.ESCAPE.isDown()) {
+				pilote.stop();
+				System.exit(0);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Une");
+			System.out.println("Erreur de Seb");
+		}
+		// fin de test 
 		
 		
 		
