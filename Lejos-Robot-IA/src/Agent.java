@@ -74,16 +74,13 @@ public class Agent {
 		
 	}
 	
-	public void deplacementAleaV1(int temps) {
+	public void deplacementAleaV1() {
 		// La V1 ne prend pas en compte les obstacles.
 		// se deplace de facon aleatoire dans la table de jeu en utilisant 
 		// detectionObjet pour eviter les mures et tourner angle pour prendre
 		// une nouvelle direction aleatoire (inspiration de bumper car)
 
-		long heureDepart = System.currentTimeMillis();
-		long heureDif = 0;
-		
-		while (heureDif<temps*1000) {
+		while (true) {
 			int distanceAlea = Math.floor(Math.random()*10); // genere une distance entre 0 et 10 cm
 			monActionneur.travel(distanceAlea);
 			int angleAlea = Math.floor((Math.random()*720)-360); // genere un angle aleatoire entre -360 et 360 degrees
