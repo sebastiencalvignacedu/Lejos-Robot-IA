@@ -87,20 +87,51 @@ public class Agent {
 		pilote.rotate(angleAlea);
 	}
 	
+	// A tester par cedric svp
+	public void evaluerDeplacementAleaV1() {
+		try {
+			Agent agent = new Agent();
+			agent.deplacementAleaV1();
+			
+			if(Button.ESCAPE.isDown()) {
+				pilote.stop();
+				System.exit(0);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Une");
+			System.out.println("Erreur de Seb");
+		}
+	}
+	
 	public void deplacementAleaV2() {
 		// La V1 ne prend pas en compte les obstacles.
 		// se deplace de facon aleatoire dans la table de jeu en utilisant 
 		// detectionObjet pour eviter les mures et tourner angle pour prendre
 		// une nouvelle direction aleatoire (inspiration de bumper car)
 
-		double distanceAlea = Math.floor(Math.random()*10); // genere une distance entre 0 et 10 cm
-		
-		for (double distanceParcouru = 0;distanceParcouru<distanceAlea;distanceParcouru+1) {
-			monActionneur.travel(distanceAlea);
-		}
+		double distanceAlea = Math.floor(Math.random()*10); // genere une distance entre 0 et 10 cm		
+		pilote.travel(distanceAlea);
 
 		double angleAlea = Math.floor((Math.random()*720)-360); // genere un angle aleatoire entre -360 et 360 degrees
-		monActionneur.rotate(angleAlea);
+		pilote.rotate(angleAlea);
+	}
+	
+	// Ne pas lancer, car deplacementAleaV2 n'est pas pret
+	public void evaluerDeplacementAleaV2() {
+		try {
+			Agent agent = new Agent();
+			agent.deplacementAleaV2();
+			
+			if(Button.ESCAPE.isDown()) {
+				pilote.stop();
+				System.exit(0);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Une");
+			System.out.println("Erreur de Seb");
+		}
 	}
 	
 	public void sequence1(){}
