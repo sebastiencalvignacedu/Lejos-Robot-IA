@@ -22,7 +22,7 @@ public class Agent {
 	String couleurDepart,couleurArrivee; 
 	private Object [][] cartePalets = new Object[3][2]; 
 	private int butPalets = 0;
-	private int[] etat = new int[5];
+	private int[] etat = new int[6];
 	/* 
 	 * l'état au premier indice etat[0] est l'état courant
 	 * 
@@ -30,7 +30,7 @@ public class Agent {
 	 * etat n2 ; recherche en fonction de cartePalets
 	 * etat n3 ; recherche aléatoire
 	 * etat n4 ; palet en possession
-	 * etat n5 ; 
+	 * etat n5 ; palet détecté
 	 * [...] ;
 	 * 
 	 */
@@ -88,8 +88,20 @@ public class Agent {
 		}
 	}
 	
-	
+	public void sequence1(){}
+	public void sequence2(){}
+	public void sequence3(){}
+	public void sequence4(){}
+	public void sequence5(){}
+	// [...]	
+	public void detectionObjet(){}
+	public void allerBaseAdverse(){}
+	public void prendrePalet(){}
+	public void calibrerAngle(){}
 	public void updateEtat() {}
+	public void chercherLigne(){}
+	public void chercherPalet(){}
+	public void suivreLigne(){}
 	public void retourneSequence() {}
 	public void testHomologation(){
 		
