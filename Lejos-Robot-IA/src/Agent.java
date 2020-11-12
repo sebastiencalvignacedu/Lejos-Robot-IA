@@ -80,15 +80,14 @@ public class Agent {
 		// detectionObjet pour eviter les mures et tourner angle pour prendre
 		// une nouvelle direction aleatoire (inspiration de bumper car)
 
-		Action monActionneur = new Action(); // cette attribut doit normalement être déclaré en dehors de cette méthode
 		long heureDepart = System.currentTimeMillis();
-		long heureDif;
+		long heureDif = 0;
 		
 		while (heureDif<temps*1000) {
 			int distanceAlea = Math.floor(Math.random()*10); // genere une distance entre 0 et 10 cm
-			monActionneur.avancerDistance(distanceAlea);
-			int angleAlea = Math.floor(Math.random()*360); // genere un angle aleatoire entre 0 et 360 degrees
-			monActionneur.tournerAngle(angleAlae);
+			monActionneur.travel(distanceAlea);
+			int angleAlea = Math.floor((Math.random()*720)-360); // genere un angle aleatoire entre -360 et 360 degrees
+			monActionneur.rotate(angleAlea);
 			heureDif = System.currentTimeMillis() - heureDepart;
 		}
 	}
