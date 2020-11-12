@@ -85,7 +85,6 @@ public class Agent {
 			monActionneur.travel(distanceAlea);
 			int angleAlea = Math.floor((Math.random()*720)-360); // genere un angle aleatoire entre -360 et 360 degrees
 			monActionneur.rotate(angleAlea);
-			heureDif = System.currentTimeMillis() - heureDepart;
 		}
 	}
 	
