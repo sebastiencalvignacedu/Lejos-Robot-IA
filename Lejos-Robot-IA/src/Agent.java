@@ -123,12 +123,13 @@ public class Agent {
 	// [...]
 	// il semblerait interessant qu'il y ait un retour booléean ; true --> palet , false --> mur
 	public void detectionObjet(){
+	Action act = new Action();
 	capt.actualise();
 	float distanceObj = (float) capt.distance;
 	if(distanceObj < (float)25) {
 		return false;
 		}
-	avancerDistance(distanceObj - 25);
+	act.avancerDistance(distanceObj - 25);
 	capt.actualise();
 	if(capt.distance < 25){
 		return false;
