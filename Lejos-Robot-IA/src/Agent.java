@@ -136,7 +136,7 @@ public class Agent {
 		]
 	return true;
 	}
-
+	// v2 incomin'
 	public void allerBaseAdverse(){
 		chercherLigne(); // le robot ce dirige sur une ligne
 		if(capt.couleur.equals("bleu")) || capt.couleur.equals("noir")) || capt.couleur;equals("vert")){
