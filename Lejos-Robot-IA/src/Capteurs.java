@@ -63,8 +63,7 @@ public class Capteurs {
 	}
 	
 	/**
-	 * Actualise permet d'actualiser :
-	 * les touches ,La couleur ,Ultrason
+	 * Actualise permet d'actualiser :les touches ,La couleur ,Ultrason
 	 */
 	public void actualise() {
 		c.actualise();
