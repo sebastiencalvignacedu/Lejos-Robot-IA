@@ -134,6 +134,9 @@ public class Agent {
 	if(capt.distance < 25){
 		return false;
 		]
+	else {
+		prendrePalet();
+		allerBaseAdverse();
 	return true;
 	}
 	// v2 incomin'
