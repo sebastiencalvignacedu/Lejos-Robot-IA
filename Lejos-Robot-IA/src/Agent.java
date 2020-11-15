@@ -138,6 +138,7 @@ public class Agent {
 	}
 	// v2 incomin'
 	public void allerBaseAdverse(){
+		// comment s'occuper de retirer un palet sur la ligne ? 
 		chercherLigne(); // le robot ce dirige sur une ligne
 		if(capt.couleur.equals("bleu")) || capt.couleur.equals("noir")) || capt.couleur;equals("vert")){
 		rotate((float)180);
