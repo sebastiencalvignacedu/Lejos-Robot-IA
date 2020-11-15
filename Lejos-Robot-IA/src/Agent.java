@@ -122,6 +122,7 @@ public class Agent {
 	public void sequence5(){}
 	// [...]	
 	public void detectionObjet(){}
+// il semblerait interessant qu'il y ait un retour booléean ; true --> palet , false --> mur
 	public void allerBaseAdverse(){}
 	public void prendrePalet(){}
 	public void calibrerAngle(){}
