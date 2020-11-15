@@ -11,6 +11,15 @@ import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.motor.EV3MediumRegulatedMotor;
 
 
+/**
+ * <b> La classe Action represente ......</b>
+ * <p>
+ * description de la classe ????????
+ * </p>
+ * @author membre du Groupe
+ * @version 8.0
+ * 
+ */
 public class Action {
 	
 	private float vitesseMax = (float) 17.45;
