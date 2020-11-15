@@ -137,7 +137,27 @@ public class Agent {
 	return true;
 	}
 
-	public void allerBaseAdverse(){}
+	public void allerBaseAdverse(){
+		chercherLigne(); // le robot ce dirige sur une ligne
+		if(capt.couleur.equals("bleu")) || capt.couleur.equals("noir")) || capt.couleur;equals("vert")){
+		rotate((float)180);
+		while(!capt.couleur.equals("white")) {
+			forward();
+			}
+	// est ce que ça marche ? 
+		pilote.lacher();
+	// rotate((float) 180);
+		}
+		if(capt.couleur.equals("rouge") || capt.couleur.equals("jaune") || capt.couleur.equals("noir"){
+			rotate((float)90);
+			while(!capt.couleur.equals("white")) {
+				forward();
+				}
+			// est ce que ça marche ? 
+			pilote.lacher();
+			// rotate((float) 180);
+			}
+		}
 	public void prendrePalet(){}
 	public void calibrerAngle(){}
 	public void updateEtat() {}
