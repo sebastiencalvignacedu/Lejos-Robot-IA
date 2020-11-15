@@ -120,9 +120,22 @@ public class Agent {
 	public void sequence3(){}
 	public void sequence4(){}
 	public void sequence5(){}
-	// [...]	
-	public void detectionObjet(){}
-// il semblerait interessant qu'il y ait un retour booléean ; true --> palet , false --> mur
+	// [...]
+	// il semblerait interessant qu'il y ait un retour booléean ; true --> palet , false --> mur
+	public void detectionObjet(){
+	capt.actualise();
+	float distanceObj = (float) capt.distance;
+	if(distanceObj < (float)25) {
+		return false;
+		}
+	avancerDistance(distanceObj - 25);
+	capt.actualise();
+	if(capt.distance < 25){
+		return false;
+		]
+	return true;
+	}
+
 	public void allerBaseAdverse(){}
 	public void prendrePalet(){}
 	public void calibrerAngle(){}
