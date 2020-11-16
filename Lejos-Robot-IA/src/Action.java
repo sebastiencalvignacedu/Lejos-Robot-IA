@@ -101,7 +101,8 @@ public class Action {
 	}
 	/**
 	 * 
-	 * @param temps est le temps à laquelle le robot 
+	 * @param temps est le temps à laquelle le robot
+	 * avaancement des des ch 
 	 */
 	public void avancerTempsMS(int temps) {
 		this.forward();
