@@ -21,7 +21,7 @@ import java.util.Scanner;
 public class Agent {
 	/**
 	 * @see Port
-	 * le " A,B,C,D " de l'agent sont les port des differents moteurs et peut-�tre modifi�</br>
+	 * le " A,B,C,D " de l'agent sont les port des differents moteurs et peut-être modifié</br>
 	 * <p>
 	 * 
 	 * </p>
@@ -82,13 +82,13 @@ public class Agent {
 	 * 
 	 */
 	/* 
-	 * l'�tat au premier indice etat[0] est l'�tat courant
+	 * l'état au premier indice etat[0] est l'état courant
 	 * 
-	 * etat n1 ; lié à l'automate en "dur", recup�re autant de palets que possible le plus vite possible
+	 * etat n1 ; liÃ© Ã  l'automate en "dur", recupère autant de palets que possible le plus vite possible
 	 * etat n2 ; recherche en fonction de cartePalets
-	 * etat n3 ; recherche aléatoire
+	 * etat n3 ; recherche alÃ©atoire
 	 * etat n4 ; palet en possession
-	 * etat n5 ; palet détecté
+	 * etat n5 ; palet dÃ©tectÃ©
 	 * [...] ;
 	 * 
 	 */
@@ -100,10 +100,10 @@ public class Agent {
 	public Agent() {
 
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Position de départ? vert/bleu");
+		System.out.println("Position de dÃ©part? vert/bleu");
 		couleurDepart = sc.nextLine();
 		while( !(couleurDepart.equals("vert") && couleurDepart.equals("bleu")) ) {
-			System.out.println("Position de départ? vert/bleu");
+			System.out.println("Position de dÃ©part? vert/bleu");
 			couleurDepart = sc.nextLine();
 		}
 		sc.close();
@@ -150,18 +150,6 @@ public class Agent {
 		pilote.travel(distanceAlea);
 		double angleAlea = Math.floor((Math.random()*720)-360); // genere un angle aleatoire entre -360 et 360 degrees
 		pilote.rotate(angleAlea);
-		try {
-			Agent agent = new Agent();
-			agent.deplacementAleaV1();
-			if(Button.ESCAPE.isDown()) {
-				pilote.stop();
-				System.exit(0);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("Une");
-			System.out.println("Erreur de Seb");
-		}
 	}
 	/**
 	 * deplacementAleaV2 permet de.......
@@ -208,7 +196,7 @@ public class Agent {
 	public void sequence5(){}
 
 	/**
-	 * detectionObjet de l'Agent permet de detecter un objet � une certaines distances.
+	 * detectionObjet de l'Agent permet de detecter un objet à une certaines distances.
 	 * 
 	 */
 	// il semblerait interessant qu'il y ait un retour boolean ; true --> palet , false --> mur
@@ -238,7 +226,7 @@ public class Agent {
 			while(!capt.couleur.equals("white")) {
 				forward();
 			}
-			// est ce que �a marche ? 
+			// est ce que ça marche ? 
 			pilote.lacher();
 			// rotate((float) 180);
 		}
@@ -247,7 +235,7 @@ public class Agent {
 			while(!capt.couleur.equals("white")) {
 				forward();
 			}
-			// est ce que ça marche ? 
+			// est ce que Ã§a marche ? 
 			pilote.lacher();
 			// rotate((float) 180);
 		}
