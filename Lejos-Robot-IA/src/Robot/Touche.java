@@ -6,6 +6,12 @@ import lejos.hardware.port.Port;
 import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.robotics.SampleProvider;
 
+/**
+ * Classe qui permet d'avoir accès au capteur de butée ( plus commodément appelés bouton touche)
+ * 
+ *
+ */
+
 public class Touche /*extends Capteurs*/ {
 	/**
 	 * attribut de classe qui définit le port sur lequel est branché le capteur Touche
