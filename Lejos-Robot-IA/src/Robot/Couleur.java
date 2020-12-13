@@ -5,7 +5,7 @@ import lejos.hardware.Button;
 import lejos.hardware.ev3.LocalEV3;
 import lejos.hardware.port.Port;
 import lejos.hardware.sensor.EV3ColorSensor;
-import lejos.robotics.Color; //changer nom de classe, variables, attributs et mÃ©thodes
+import lejos.robotics.Color; //changer nom de classe, variables, attributs et méthodes
 import lejos.robotics.SampleProvider;
 import lejos.robotics.filter.MeanFilter;
 import lejos.utility.Delay;
@@ -39,43 +39,43 @@ public class Couleur /*extends Capteurs*/ {
 	Button.ENTER.waitForPressAndRelease();
 	bleu = new float[recup.sampleSize()];
 	recup.fetchSample(bleu, 0);
-	System.out.println("Bleu calibrÃ©.");
+	System.out.println("Bleu calibré.");
 	
 	System.out.println("Calibrez le rouge.");
 	Button.ENTER.waitForPressAndRelease();
 	rouge = new float[recup.sampleSize()];
 	recup.fetchSample(rouge, 0);
-	System.out.println("Rouge calibrÃ©.");
+	System.out.println("Rouge calibré.");
 
 	System.out.println("Calibrez le vert.");
 	Button.ENTER.waitForPressAndRelease();
 	vert = new float[recup.sampleSize()];
 	recup.fetchSample(vert, 0);
-	System.out.println("Vert calibrÃ©.");
+	System.out.println("Vert calibré.");
 
 	System.out.println("Calibrez le noir.");
 	Button.ENTER.waitForPressAndRelease();
 	noir = new float[recup.sampleSize()];
 	recup.fetchSample(noir, 0);
-	System.out.println("Noir calibrÃ©.");
+	System.out.println("Noir calibré.");
 	
 	System.out.println("Calibrez le jaune.");
 	Button.ENTER.waitForPressAndRelease();
 	jaune = new float[recup.sampleSize()];
 	recup.fetchSample(jaune, 0);
-	System.out.println("Jaune calibrÃ©.");
+	System.out.println("Jaune calibré.");
 	
 	System.out.println("Calibrez le blanc.");
 	Button.ENTER.waitForPressAndRelease();
 	blanc = new float[recup.sampleSize()];
 	recup.fetchSample(blanc, 0);
-	System.out.println("Blanc calibrÃ©.");
+	System.out.println("Blanc calibré.");
 	
 	System.out.println("Calibrez le gris.");
 	Button.ENTER.waitForPressAndRelease();
 	gris = new float[recup.sampleSize()];
 	recup.fetchSample(gris, 0);
-	System.out.println("Gris calibrÃ©.");
+	System.out.println("Gris calibré.");
 	
 	actualise();
 	// }
@@ -180,3 +180,6 @@ public class Couleur /*extends Capteurs*/ {
 	}*/
 	
 }
+
+
+
