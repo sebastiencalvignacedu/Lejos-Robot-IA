@@ -1,3 +1,4 @@
+package Robot;
 import lejos.hardware.Button;
 import lejos.utility.Delay;
 

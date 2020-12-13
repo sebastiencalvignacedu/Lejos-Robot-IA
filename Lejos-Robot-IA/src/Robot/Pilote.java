@@ -1,3 +1,4 @@
+package Robot;
 import lejos.robotics.chassis.Chassis;
 import lejos.robotics.navigation.MovePilot;
 import lejos.hardware.motor.*;
@@ -7,7 +8,14 @@ public class Pilote extends MovePilot {
 	 EV3MediumRegulatedMotor pince;
 	 Chassis chassis;
 	 double rotation = 0;
+	 
+	 public double getAngle() {
+		 return rotation;
+	 }
 
+	 public void setAngle(double angle) {
+		 this.rotation = angle;
+	 }
 	
 	public Pilote(Chassis chassis, EV3MediumRegulatedMotor pince) {
 		super(chassis);
@@ -17,10 +25,10 @@ public class Pilote extends MovePilot {
 	}
 	
 	public void prendre() {
-		pince.rotate(-1300);
+		pince.rotate(-600);
 	}
 	public void lacher() {
-		pince.rotate(1300);
+		pince.rotate(600);
 	}
 	public void vitesseMax() {
 		chassis.getMaxLinearSpeed();
@@ -44,5 +52,4 @@ public class Pilote extends MovePilot {
 	 * public void stop()
 	 * 
 	 */
-
 }

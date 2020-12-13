@@ -1,3 +1,4 @@
+package Robot;
 
 public class ActionCompose {
 	public void suvreLigne(String couleur) {
