@@ -1,55 +1,114 @@
 package Robot;
+
+
 import lejos.robotics.chassis.Chassis;
 import lejos.robotics.navigation.MovePilot;
 import lejos.hardware.motor.*;
 
+/**
+ * Class permettant de gérer les déplacements du robot.
+ * 
+ *
+ */
+
 public class Pilote extends MovePilot {
-
+	/**
+	 * Attribut de classe permettant d'interragir avec le moteur de la pince du robot
+	 * @see EV3MediumRegulatedMotor
+	 * 
+	 */
 	 EV3MediumRegulatedMotor pince;
+	 /**
+	  * Attribut de classe permettant de définir le chassis du robot. 
+	  * Ce chassis permettra de faire tourner le robot
+	  * @see Chassis
+	  * 
+	  */
 	 Chassis chassis;
-	 double rotation = 0;
+	 /**
+	  * attribut de classe définissant la rotation totale éffectué par le robot
+	  */
+	 double rotation = 0;	
 	 
-	 public double getAngle() {
-		 return rotation;
-	 }
-
-	 public void setAngle(double angle) {
-		 this.rotation = angle;
-	 }
-	
+	 /**
+	  * @constructor
+	  * Ce constructeur permet de définir le chassis et la pince
+	  * 
+	  * @param chassis
+	  * @param pince
+	  */
 	public Pilote(Chassis chassis, EV3MediumRegulatedMotor pince) {
 		super(chassis);
 		this.chassis = chassis;
 		this.pince = pince;
-		// TODO Auto-generated constructor stub
 	}
 	
+	/**
+		 * Méthode qui permet le retour de l’attribut rotation.
+		 * @return double, représentant la rotation du robot
+		 */
+	public double getAngle() {
+		
+		return rotation % 360;
+	}
+	/**
+		 * Défini une valeur à rotation en fonction du paramètre donné en degrés. 
+		 * @return void
+		 */
+	public void setAngle(double angle) {
+		
+		rotation = angle;
+	}
+	/**
+	 * Fais fermer la pince de 600 (rotation demandé au moteur) . 
+	 * @return void
+	 */
+	
 	public void prendre() {
-		pince.rotate(-600);
+		
+		this.pince.rotate(-600);
 	}
+	
+	/**
+	 * Fais ouvrir la pince de 600 (rotation demandé au moteur) . 
+	 * @return void
+	 */
+	
 	public void lacher() {
-		pince.rotate(600);
+		this.pince.rotate(600);
 	}
+	/**
+	 * méthode faisant ce déplacé le robot au maximum de sa vitesse
+	 * @return void
+	 * @deprecated
+	 */
 	public void vitesseMax() {
 		chassis.getMaxLinearSpeed();
 		chassis.getMaxAngularSpeed();
 	}
+	/**
+	 * Défini la vitesse de déplacement en fonction de deux paramètres.
+	 * @param linear
+	 * @param angular
+	 * @return void
+	 * @see chassis#setSpeed(linear, angular)
+	 */
 	public void reglerVitesse(double linear, double angular) {
 		chassis.setSpeed(linear, angular);
 	}
-	public void rotate(double angle) {
-	    rotate(angle, false);
-	    rotation = rotation + angle;
-	  }
-	
-	/*
-	 * public void forward()
-	 * public void backward()
-	 * public void travel(double distance)
-	 * public void rotate(double angle)
-	 * public void rotateLeft()
-	 * public void rotateRight()
-	 * public void stop()
-	 * 
+	/**
+	 * Permet au robots de tourner d’un angle donné en paramètre tout en mettant à jour l’attribut rotation. 
+	 * @see MovePilot#rotate(double,boolean)  
+	 * @param angle
 	 */
+	public void rotate(double angle) {
+		if(angle > 180) {
+			rotate(angle - 360,false);
+			rotation=rotation+(angle - 360);
+		}
+		else {	    
+			rotate(angle, false);
+			rotation=rotation+angle;
+		}
+	  }
 }
