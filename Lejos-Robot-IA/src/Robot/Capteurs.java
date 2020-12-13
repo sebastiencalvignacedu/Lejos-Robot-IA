@@ -1,5 +1,5 @@
 package Robot;
-import lejos.hardware.Button;
+ import lejos.hardware.Button;
 import lejos.utility.Delay;
 
 
@@ -32,7 +32,7 @@ public class Capteurs {
 	}
 	
 	public void actualise() {
-		c.actualise();
+		//c.actualise();
 		t.actualise();
 		u.actualise();
 		this.distance = u.distance;
@@ -53,3 +53,4 @@ public class Capteurs {
 	}
 	 */
 }
+
