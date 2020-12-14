@@ -9,6 +9,15 @@ import lejos.hardware.motor.EV3MediumRegulatedMotor;
 import lejos.hardware.port.Port;
 import lejos.robotics.chassis.*;
 
+/**
+ *<b>AgentV2 represente la classe principlae du projet.</b>
+ *<p>Elle est la classe dans laquelle toutes les fonctionnalités du projet
+ *sont testées.</p>
+ *
+ * @author 
+ *@version 8.0
+ *
+ */
 
 //régler allerbaseadverse
 //rotation?

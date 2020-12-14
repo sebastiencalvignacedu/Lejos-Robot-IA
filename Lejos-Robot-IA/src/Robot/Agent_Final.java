@@ -201,9 +201,6 @@ public class Agent_Final {
 	 * @return un boolean 
 	 */
 	public boolean chercherPalet() {
-		/*
-		 *
-		 */
 		float dist;
 		int i=0;
 		pilote.reglerVitesse(200, 200);
@@ -377,8 +374,8 @@ public class Agent_Final {
 	 * @return un boolean
 	 */
 	public boolean chercherBut() {
-		
-		 double tempsFin = System.currentTimeMillis() +
+
+		double tempsFin = System.currentTimeMillis() +
 				Math.floor(Math.random()*10000);
 		double angleAlea = Math.floor(Math.random()*360);
 		pilote.reglerVitesse(400, 400);
@@ -570,10 +567,10 @@ public class Agent_Final {
 		if(etat[0].equals(etat[3])) {
 			sequence3();
 			return;
-		}
-		if(etat[0].equals(etat[4])) {
-			sequence4();
-			return;
+			if(etat[0].equals(etat[4])) {
+				sequence4();
+				return;
+			}
 		}
 	}
 	/**

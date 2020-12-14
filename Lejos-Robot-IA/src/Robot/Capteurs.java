@@ -4,9 +4,12 @@ package Robot;
 import lejos.utility.Delay;
 
 /**
- * 
- * Classe permettant de centralisée les informations concernant les différents 
- * capteurs.
+ *<b>Capteurs represente la classe distributeurs des informations du projet.</b>
+ *<p> Classe permettant de centralisée les informations concernant les différents 
+ * capteurs.</p>
+ *
+ * @author 
+ *@version 8.0
  *
  */
 public class Capteurs {
@@ -16,36 +19,35 @@ public class Capteurs {
 	 */
 	boolean touche;
 	
-	/*
+	/**
 	 * Attribut de classe permettant de connaitre la distance de l'objet 
 	 */
 	
 	float distance;
 	
-	/*
+	/**
 	 *Attribut de classe permettant de savoir sur quel couleur on ce trouve 
 	 */
 	String couleur;
 	/**
+	 * @see Touche#t
 	 * Objet de la classe Touche
-	 * @see Touche
 	 */
 	private Touche t = new Touche();
 	/**
+	 * @see Couleur#c
 	 * Objet de la Classe Touche
-	 * @see Couleur
 	 */
 	private Couleur c = new Couleur();
 	
 	/**
+	 *  @see Ultrason#u
 	 * Objet de la Classe Ultrason
-	 * @see Ultrason
 	 */
 	private Ultrason u = new Ultrason();
 	/**
-	 * définit les attributs touche, distance et couleur avec les objet t, u, c
-	 * @constructor 
-	 * 
+	 *  @constructor 
+	 * définit les attributs touche, distance et couleur avec les objet t, u, c 
 	 */
 	public Capteurs() {
 		this.distance = u.distance;
@@ -54,33 +56,36 @@ public class Capteurs {
 		
 	}
 	/**
-	 * Méthode qui retourne l'attribut touche
-	 * @return  true si le bouton est enfoncé et false si le bouton n'est pas appuyé 
+	 * La methode isTouche donne l'etat si toucher ou pas.
+	 * Elle permet de d'envoyer true si le bouton est enfoncé et false si le bouton n'est pas appuyé
+	 * @return un boolean 
 	 */
 	public boolean isTouche() {
 		return touche;
 	}
 	/**
-	 * Méthode qui retourne l'attribut disttance
-	 * @return un float correspondant à la distance mesurée
+	 * La methode getDistance est la distance parcourue.
+	 * Elle correspondant à la distance mesurée.
+	 * @return un float 
 	 */
 
 	public float getDistance() {
 		return distance;
 	}
 /**
- * Méthode qui retourne l'attribut Couleur
- * @return une String donnant le nom de la couleur rencontrée
+ * La methode getCouleur represente les couleurs.
+ * Elle donne le nom de la couleur rencontrée.
+ * @return une String de couleur.
  */
 	public String getCouleur() {
 		return couleur;
 	}
 	/**
-	 * Méthode qui actualise les données des capteurs
-	 * @return void
+	 * la méthode actualise, actualise les données des capteurs.
 	 * @see Touche#actualise()
 	 * @see Couleur#actualise()
 	 * @see Ultrason#actualise()
+	 * @return void
 	 */
 	public void actualise() {
 		//c.actualise();

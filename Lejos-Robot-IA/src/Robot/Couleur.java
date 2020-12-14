@@ -10,6 +10,15 @@ import lejos.robotics.SampleProvider;
 import lejos.robotics.filter.MeanFilter;
 import lejos.utility.Delay;
 
+/**
+ *<b>Couleur represente la classe distributeurs des informations du projet.</b>
+ *<p> Classe permettant de centralisée les informations concernant les différents 
+ * capteurs.</p>
+ *
+ * @author 
+ *@version 8.0
+ *
+ */
 public class Couleur /*extends Capteurs*/ {
 
 	
