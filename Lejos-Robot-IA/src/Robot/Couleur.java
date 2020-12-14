@@ -1,5 +1,4 @@
 package Robot;
-package a;
 
 import java.awt.Button;
 import java.awt.Color;
