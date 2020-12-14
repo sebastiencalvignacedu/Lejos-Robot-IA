@@ -23,7 +23,7 @@ import lejos.utility.Delay;
 public class Agent_Final {
 	/**
 	 * Les ports des cables du  Robot à visibilité privée.
-	 * @see Port
+	 * @see Port Port
 	 */
 	private Port A,B,C,D;
 	/**
@@ -480,12 +480,17 @@ public class Agent_Final {
 	 * Si échec, abandon de la méthode après une rotation de 180°.
 	 */
 	public void Homologation() {
+		/*
+		 * méthode permettant d'avancer jusqu'à récupérer un palet, le saisir, effectuer une légère rotation, avancer juusqu'à l'enbut adverse et déposer le palet
+		 * si échec, abandon de la méthode après une rotation de 180°
+		 */
+		long tempsFin;
+		
 		pilote.reglerVitesse(400, 400);
 		pilote.forward();
 		while(pilote.isMoving()) {
 			capt.actualise();
-			if(capt.getDistance() < 0.2 ||
-					capt.getCouleur().equals("blanc")) {
+			if(capt.getDistance() < 0.2 || capt.getCouleur().equals("blanc")) {
 				pilote.stop();
 				pilote.rotate(180);
 				return;
@@ -493,13 +498,26 @@ public class Agent_Final {
 			if(capt.isTouche()) {
 				pilote.stop();
 			}
-			if(capt.getCouleur().equals("vert") ||
-					capt.getCouleur().equals("bleu")) {
+			if(capt.getCouleur().equals("vert") || capt.getCouleur().equals("bleu")) {
 				derniereLigneTraversee=capt.getCouleur();
 			}
 		}
 		pilote.prendre();
 		pilote.rotate(MAX_ROT);
+		pilote.forward();
+		tempsFin = System.currentTimeMillis() + 5000;
+		while(System.currentTimeMillis() < tempsFin && pilote.isMoving()) {
+			if(capt.getDistance() < 0.2 || capt.getCouleur().equals("blanc")) {
+				pilote.stop();
+				pilote.rotate(180);
+				return;
+			}
+			if(capt.getCouleur().equals("vert") || capt.getCouleur().equals("bleu")) {
+				derniereLigneTraversee=capt.getCouleur();
+			}
+		}
+		pilote.stop();
+		pilote.rotate(0-MAX_ROT);
 		pilote.forward();
 		while(!capt.getCouleur().equals("blanc")) {
 			capt.actualise();
@@ -509,8 +527,7 @@ public class Agent_Final {
 				pilote.rotate(180);
 				return;
 			}
-			if(capt.getCouleur().equals("vert") ||
-					capt.getCouleur().equals("bleu")) {
+			if(capt.getCouleur().equals("vert") || capt.getCouleur().equals("bleu")) {
 				derniereLigneTraversee=capt.getCouleur();
 			}
 		}
@@ -518,6 +535,8 @@ public class Agent_Final {
 		pilote.lacher();
 		pilote.rotate(180);
 	}
+	
+	
 	/**
 	 * La methode updateEtat met à jour l'etat courant.
 	 * Elle permet de mettre à jour l'état courant d'après les attributs de 
