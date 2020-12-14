@@ -1,12 +1,12 @@
 package Robot;
 
-import java.awt.Button;
-import java.awt.Color;
-import java.util.Arrays;
 import java.util.List;
-import javax.sound.sampled.Port;
+import java.util.Arrays;
+import lejos.hardware.Button;
 import lejos.hardware.ev3.LocalEV3;
+import lejos.hardware.port.Port;
 import lejos.hardware.sensor.EV3ColorSensor;
+import lejos.robotics.Color; //changer nom de classe, variables, attributs et méthodes
 import lejos.robotics.SampleProvider;
 import lejos.robotics.filter.MeanFilter;
 import lejos.utility.Delay;
