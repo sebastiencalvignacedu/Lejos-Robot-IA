@@ -9,7 +9,7 @@ import lejos.robotics.SampleProvider;
 /**
  * <b>Touche represente le bouton touche du projet.</b>
  * <p> Classe qui permet d'avoir accès au capteur de butée ( plus commodément appelés bouton touche).</p>
- * @author 
+ * @author Calvignac Sébastien, Simon Dorian, Kamissoko Djoko, Auray Cédric
  * @version 8.0
  *
  */

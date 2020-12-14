@@ -8,7 +8,7 @@ import lejos.robotics.SampleProvider;
 /**
  * <b>Ultrason represente les capteurs sonor du projet.</b>
  * <p> Classe qui permet d'avoir accès au capteur de distance de type Sonar.</p>
- * @author 
+ * @author Calvignac Sébastien, Simon Dorian, Kamissoko Djoko, Auray Cédric
  * @version 8.0
  */
 public class Ultrason /*extends Capteurs*/ {

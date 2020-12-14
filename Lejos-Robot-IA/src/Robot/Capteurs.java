@@ -8,7 +8,7 @@ import lejos.utility.Delay;
  *<p> Classe permettant de centralisée les informations concernant les différents 
  * capteurs.</p>
  *
- * @author 
+ * @author Calvignac Sébastien, Simon Dorian, Kamissoko Djoko, Auray Cédric
  *@version 8.0
  *
  */

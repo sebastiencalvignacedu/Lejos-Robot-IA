@@ -8,7 +8,7 @@ import lejos.hardware.motor.*;
 /**
  * <b>Pilote represente la generation des déplacements du projet.</b>
  * <p> Classe permettant de gérer les déplacements du robot.</p>
- * @author 
+ * @author Calvignac Sébastien, Simon Dorian, Kamissoko Djoko, Auray Cédric
  * @version 8.0
  *
  */

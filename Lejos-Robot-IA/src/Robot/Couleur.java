@@ -14,7 +14,7 @@ import lejos.utility.Delay;
 /**
  *<b>Couleur  donne accès au capteur de couleur.</b>
  *<p> Elle permet d'avoir accès au capteur de Couleur.</p>
- * @author 
+ * @author Calvignac Sébastien, Simon Dorian, Kamissoko Djoko, Auray Cédric
  *@version 8.0
  */
 public class Couleur /*extends Capteurs*/ {

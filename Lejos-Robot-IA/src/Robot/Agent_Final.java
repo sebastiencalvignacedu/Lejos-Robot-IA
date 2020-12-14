@@ -11,11 +11,12 @@ import lejos.robotics.chassis.WheeledChassis;
 import lejos.utility.Delay;
 
 /**
+ * x
  *<b>Agent_Final represente la classe principlae du projet.</b>
  *<p>Elle est la classe dans laquelle toutes les fonctionnalités du projet
  *sont testées.</p>
  *
- * @author 
+ * @author Calvignac Sébastien, Simon Dorian, Kamissoko Djoko, Auray Cédric
  *@version 8.0
  *
  */
@@ -567,12 +568,12 @@ public class Agent_Final {
 		if(etat[0].equals(etat[3])) {
 			sequence3();
 			return;
+		}
 			if(etat[0].equals(etat[4])) {
 				sequence4();
 				return;
 			}
 		}
-	}
 	/**
 	 * La methode main est la methode principale de la classe, permet de lancer
 	 * cette classe.
