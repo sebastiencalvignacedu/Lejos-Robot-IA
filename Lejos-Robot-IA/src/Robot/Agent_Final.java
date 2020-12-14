@@ -11,7 +11,7 @@ import lejos.robotics.chassis.WheeledChassis;
 import lejos.utility.Delay;
 
 /**
- * x
+ * 
  *<b>Agent_Final represente la classe principlae du projet.</b>
  *<p>Elle est la classe dans laquelle toutes les fonctionnalités du projet
  *sont testées.</p>
@@ -22,39 +22,39 @@ import lejos.utility.Delay;
  */
 public class Agent_Final {
 	/**
-	 * @see Port#port
 	 * Les ports des cables du  Robot à visibilité privée.
+	 * @see Port#Port
 	 *  
 	 */
 	private Port A,B,C,D;
 	/**
-	 * @see EV3LargeRegulatedMotor#moteurGauche#moteurDroit
 	 * Les moteurs gauche et droite du Robot à visibilité privée.
+	 * @see EV3LargeRegulatedMotor#moteurGauche#moteurDroit
 	 */
 	private EV3LargeRegulatedMotor moteurGauche,moteurDroit;
 	/**
-	 * @see EV3MediumRegulatedMotor#pince
 	 * la pince du Robot pince à visibilité privée.
+	 * @see EV3MediumRegulatedMotor#pince
 	 */
 	private EV3MediumRegulatedMotor pince;
 	/**
-	 * @see Wheel#rouGauche#roueDroite
 	 * Les roues Gauche et Droite du Robot à visibilité privée.
+	 * @see Wheel#rouGauche#roueDroite
 	 */
 	private Wheel roueGauche, roueDroite;
 	/**
-	 * @see Chassis#chassis
 	 * Le chassis du Robot à visibilité privée.
+	 * @see Chassis#chassis
 	 */
 	private Chassis chassis;
 	/**
-	 * @see Pilote#pilote
 	 * Le pilotepilote à visibilité privée.
+	 * @see Pilote#pilote
 	 */
 	private Pilote pilote;
 	/**
-	 * @see Capteurs#capt
 	 *capt à visibilité privée.
+	 * @see Capteurs#capt
 	 */
 	private Capteurs capt;
 	/**

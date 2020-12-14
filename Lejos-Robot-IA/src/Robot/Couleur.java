@@ -51,23 +51,23 @@ public class Couleur /*extends Capteurs*/ {
   */
  float[] vert;
  /**
-  * tableau de trois float correspondant aux valeurs RGB du noir
+  * tableau de trois float correspondant aux valeurs RGB du noir callibre
   */
  float[] noir;
  /**
-  * tableau de trois float correspondant aux valeurs RGB du blanc
+  * tableau de trois float correspondant aux valeurs RGB du blanc callibre
   */
  float[] blanc;
  /**
-  * tableau de trois float correspondant aux valeurs RGB du jaune
+  * tableau de trois float correspondant aux valeurs RGB du jaune callibre
   */
  float[] jaune;
  /**
-  * tableau de trois float correspondant aux valeurs RGB du gris
+  * tableau de trois float correspondant aux valeurs RGB du gris callibre
   */
  float[] gris;
  /**
-  * attribut de classe stockant le nom de la couleur rencontrÃ©e
+  * attribut de classe stockant le nom de la couleur rencontrée
   */
  String couleur ="";
  
