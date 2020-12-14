@@ -23,8 +23,7 @@ import lejos.utility.Delay;
 public class Agent_Final {
 	/**
 	 * Les ports des cables du  Robot à visibilité privée.
-	 * @see Port#Port
-	 *  
+	 * @see Port
 	 */
 	private Port A,B,C,D;
 	/**

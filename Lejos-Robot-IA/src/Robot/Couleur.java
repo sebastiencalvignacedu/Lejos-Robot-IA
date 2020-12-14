@@ -20,18 +20,18 @@ import lejos.utility.Delay;
 public class Couleur /*extends Capteurs*/ {
 
 	/**
+	 * attribut de classe qui définit le port sur lequel est branché le capteur Couleur
 	 * @see Port#s3
-	 * attribut de classe qui dÃ©finit le port sur lequel est branchÃ© le capteur Couleur
 	 */	
  Port s3;
  /**
-  * @see EV3ColorSensor#capteurCouleur
    * Attribut de classe permettant d'interagir avec le capteur
+  * @see EV3ColorSensor#capteurCouleur
    */
  EV3ColorSensor capteurCouleur;
  /**
+  * Attribut de classe permettant d'obtenir un échantillon du capteur 
   * @see SampleProvider#recup
-  * Attribut de classe permettant d'obtenir un Ã©chantillon du capteur 
   */
  SampleProvider recup;
  /**
@@ -72,10 +72,10 @@ public class Couleur /*extends Capteurs*/ {
  String couleur ="";
  
  /**
-  * @constructeur
   * définit les attributs s3, capteurCouleur et recup.
   * Le constructeur permet d'instancier les tableaux de couleur en utilisant le capteurCouleur. 
-  * Et enfin le constructeur appel la mÃ©thode actualise().
+  * Et enfin le constructeur appel la méthode actualise().
+  * @constructeur
   */
  public Couleur() {
 	 
@@ -90,43 +90,43 @@ public class Couleur /*extends Capteurs*/ {
 	Button.ENTER.waitForPressAndRelease();
 	bleu = new float[recup.sampleSize()];
 	recup.fetchSample(bleu, 0);
-	System.out.println("Bleu calibrÃ©.");
+	System.out.println("Bleu calibré.");
 	
 	System.out.println("Calibrez le rouge.");
 	Button.ENTER.waitForPressAndRelease();
 	rouge = new float[recup.sampleSize()];
 	recup.fetchSample(rouge, 0);
-	System.out.println("Rouge calibrÃ©.");
+	System.out.println("Rouge calibré.");
 
 	System.out.println("Calibrez le vert.");
 	Button.ENTER.waitForPressAndRelease();
 	vert = new float[recup.sampleSize()];
 	recup.fetchSample(vert, 0);
-	System.out.println("Vert calibrÃ©.");
+	System.out.println("Vert calibré.");
 
 	System.out.println("Calibrez le noir.");
 	Button.ENTER.waitForPressAndRelease();
 	noir = new float[recup.sampleSize()];
 	recup.fetchSample(noir, 0);
-	System.out.println("Noir calibrÃ©.");
+	System.out.println("Noir calibré.");
 	
 	System.out.println("Calibrez le jaune.");
 	Button.ENTER.waitForPressAndRelease();
 	jaune = new float[recup.sampleSize()];
 	recup.fetchSample(jaune, 0);
-	System.out.println("Jaune calibrÃ©.");
+	System.out.println("Jaune calibré.");
 	
 	System.out.println("Calibrez le blanc.");
 	Button.ENTER.waitForPressAndRelease();
 	blanc = new float[recup.sampleSize()];
 	recup.fetchSample(blanc, 0);
-	System.out.println("Blanc calibrÃ©.");
+	System.out.println("Blanc calibré.");
 	
 	System.out.println("Calibrez le gris.");
 	Button.ENTER.waitForPressAndRelease();
 	gris = new float[recup.sampleSize()];
 	recup.fetchSample(gris, 0);
-	System.out.println("Gris calibrÃ©.");
+	System.out.println("Gris calibré.");
 	
 	actualise();
 	// }
@@ -143,9 +143,11 @@ public class Couleur /*extends Capteurs*/ {
  //}
  
  /**
-  * La methode scalaire correspond aux valeurs RGB.
-  * Cette méthode prend en paramètres des deux tableaux de 3 float chacun 
-  * contenant les valeurs correspondant virtuellement aux valeurs RGB échantillonnales via le capteur de couleurs.
+  * La methode scalaire correspond aux valeurs RGB, 
+  * cette méthode prend en paramètres des deux tableaux 
+  * de 3 float chacun contenant les valeurs correspondant 
+  * virtuellement aux valeurs RGB échantillonnales via le 
+  * capteur de couleurs.
   * @param v1
   * @param v2
   * @return le scalaire des deux tableaux
@@ -158,7 +160,7 @@ public class Couleur /*extends Capteurs*/ {
  
  /**
   * La méthode onPath
-  * méthode qui permet de comparer une String en parametre Ã  l'attribut couleur actualiser
+  * méthode qui permet de comparer une String en parametre à  l'attribut couleur actualiser
   * @param chemin
   * @return true si la couleur en parametre est la meme que celle percue. la valeur retourn est False si la couleur en parametre
   * n'est pas la meme que celle percue
@@ -170,7 +172,7 @@ public class Couleur /*extends Capteurs*/ {
  /**
   * méthode qui permet de savoir si une couleur donné en parametre correspond a une couleur presente sur la table
   * @param chemin
-  * @return true si la valeur dÃ©tectÃ© correspond Ã  une couleur de la table
+  * @return true si la valeur détecté correspond à  une couleur de la table
   */
  public boolean onPath(String []chemin) {
 	 actualise();
@@ -178,8 +180,7 @@ public class Couleur /*extends Capteurs*/ {
      return(liste.contains(this.couleur));
  }
 /**
- * La méthode actualise.
- *  Permet d'actualiser l'attribut this.couleur pour representer sous forme d'une String la couleur perçue par le capteur couleur.
+ * Permet d'actualiser l'attribut this.couleur pour representer sous forme d'une String la couleur perçue par le capteur couleur.
  */
  	public void actualise() {
 		//colorProvider.fetchSample(colorSample, 0);
